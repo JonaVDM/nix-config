@@ -18,8 +18,11 @@ in {
         xkb-options = [ "caps:escape" ];
       };
       "org/gnome/desktop/peripherals/keyboard" = {
-        delay = "uint32 300";
+        delay = "uint32 300"; # TODO: not working, fix this.
 	      repeat = "unit32 35";
+      };
+      "org/gnome/desktop/peripherals/mouse" = {
+        speed = "-0.59999999999999998"; # TODO: not working, fix this.
       };
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";

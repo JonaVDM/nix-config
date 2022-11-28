@@ -95,6 +95,7 @@
     maven
     jdk
     gnumake
+    fzf
   ];
 
   # Enable the OpenSSH daemon.
@@ -113,15 +114,14 @@
     };
   };
 
-
-  # Don't we all love java
-  programs.java.enable = true;
-
   programs.zsh.enable = true;
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "Hack" ]; })
   ];
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.opengl.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
