@@ -96,6 +96,7 @@
     jdk
     gnumake
     fzf
+    go
   ];
 
   # Enable the OpenSSH daemon.
