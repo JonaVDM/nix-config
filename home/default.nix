@@ -5,6 +5,7 @@
     ./dotfiles.nix
     ./fonts.nix
     ./cli
+    ./apps
   ];
 
   config = {
