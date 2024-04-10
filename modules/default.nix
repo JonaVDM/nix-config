@@ -3,8 +3,10 @@
 {
   imports = [
     ./system.nix
+
     ./common
     ./dev
+    ./wm
   ];
 
   programs.zsh.enable = true;
