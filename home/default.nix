@@ -3,6 +3,7 @@
 {
   imports = [
     ./dotfiles.nix
+    ./fonts.nix
     ./cli
   ];
 
