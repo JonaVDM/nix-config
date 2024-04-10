@@ -29,5 +29,9 @@ in
     ".gitmessage" = {
       source = "${dotfiles}/.gitmessage";
     };
+
+    ".config/alacritty/alacritty.toml" = {
+      source = "${dotfiles}/.alacritty.toml";
+    };
   };
 }
