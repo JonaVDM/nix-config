@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 lib.mkIf(config.wm.gnome)
 {
@@ -14,4 +14,8 @@ lib.mkIf(config.wm.gnome)
     layout = "us";
     variant = "";
   };
+
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.blur-my-shell
+  ];
 }

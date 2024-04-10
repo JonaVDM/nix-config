@@ -6,6 +6,7 @@
     ./fonts.nix
     ./cli
     ./apps
+    ./gnome
   ];
 
   config = {
