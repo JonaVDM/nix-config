@@ -26,10 +26,6 @@ in
       source = "${dotfiles}/.p10k.zsh";
     };
 
-    ".tmux.conf" = {
-      source = "${dotfiles}/.tmux.conf";
-    };
-
     ".gitmessage" = {
       source = "${dotfiles}/.gitmessage";
     };

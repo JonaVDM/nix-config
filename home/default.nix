@@ -3,7 +3,7 @@
 {
   imports = [
     ./dotfiles.nix
-    ./programs
+    ./cli
   ];
 
   config = {

@@ -3,6 +3,7 @@
 {
   imports = [
     ./zsh.nix
+    ./tmux.nix
   ];
 
   home.packages = with pkgs; [
@@ -29,10 +30,6 @@
   };
 
   programs.fzf = {
-    enable = true;
-  };
-
-  programs.tmux = {
     enable = true;
   };
 
