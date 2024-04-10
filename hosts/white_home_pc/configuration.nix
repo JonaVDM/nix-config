@@ -17,8 +17,8 @@
 
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
-  # Enable host services
   wm.gnome = true;
+  common.nvidia = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
