@@ -19,6 +19,7 @@
 
   wm.gnome = true;
   common.nvidia = true;
+  common.docker = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
