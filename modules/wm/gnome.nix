@@ -1,5 +1,6 @@
-{ ... }:
+{ lib, config, ... }:
 
+lib.mkIf(config.wm.gnome)
 {
   # Enable the X11 windowing system.
   services.xserver.enable = true;
