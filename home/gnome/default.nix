@@ -51,6 +51,7 @@
       "switch-to-workspace-2" = ["<Super>2"];
       "switch-to-workspace-3" = ["<Super>3"];
       "switch-to-workspace-4" = ["<Super>4"];
+      "close" = ["<Super>q"];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
