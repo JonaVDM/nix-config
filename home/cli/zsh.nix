@@ -7,12 +7,11 @@
     enableCompletion = true;
 
     shellAliases = {
-      git-hash = ''
-        nix-prefetch-git https://github.com/jonavdm/dotfiles.git --quiet | 
-          jq -r '{"repo": .url, "rev": .rev, "hash": .sha256}'
-
-        nix-prefetch-git https://github.com/jonavdm/neovim-config.git --quiet |
-          jq -r '{"repo": .url, "rev": .rev, "hash": .sha256}'
+      update-dotfiles = ''
+        cd ~/.nix-config &&
+        nvfetcher &&
+        git add _sources &&
+        git commit -m "chore(nvfetcher): update sources"
       '';
       update = "sudo nixos-rebuild switch --flake ~/.nix-config";
       gaa = "git add .";

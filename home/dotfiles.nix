@@ -1,7 +1,7 @@
 {  pkgs, ... }:
 
 let
-  gen = pkgs.callPackage ../../_sources/generated.nix { }; 
+  gen = pkgs.callPackage ../_sources/generated.nix { }; 
 in
 {
   home.file = {
