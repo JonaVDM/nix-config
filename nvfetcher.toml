@@ -1,0 +1,7 @@
+[dotfiles]
+src.git = "https://github.com/JonaVDM/dotfiles.git"
+fetch.github = "JonaVDM/dotfiles"
+
+[nvim]
+src.git = "https://github.com/JonaVDM/neovim-config.git"
+fetch.github = "JonaVDM/neovim-config"

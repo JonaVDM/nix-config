@@ -1,0 +1,42 @@
+{
+    "dotfiles": {
+        "cargoLocks": null,
+        "date": "2024-04-11",
+        "extract": null,
+        "name": "dotfiles",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "JonaVDM",
+            "repo": "dotfiles",
+            "rev": "2b9da42ed0750457284cb1f9fae57e9bfc910519",
+            "sha256": "sha256-YZnON69Uh4pyxnW99LHnsZZTnyZBwRwHiXhTsFZAqgY=",
+            "type": "github"
+        },
+        "version": "2b9da42ed0750457284cb1f9fae57e9bfc910519"
+    },
+    "nvim": {
+        "cargoLocks": null,
+        "date": "2024-04-11",
+        "extract": null,
+        "name": "nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "JonaVDM",
+            "repo": "neovim-config",
+            "rev": "8c4962e8eec17abd3139e15c9850345a6d71a5ba",
+            "sha256": "sha256-IL8CT+z7XSROt86K8dORN7KpH97yyPET1VJIk4YJMCM=",
+            "type": "github"
+        },
+        "version": "8c4962e8eec17abd3139e15c9850345a6d71a5ba"
+    }
+}
