@@ -4,8 +4,8 @@ let
  dotfiles = pkgs.fetchFromGitHub {
    owner = "jonavdm";
    repo = "dotfiles";
-   rev = "704317c42434c33e99ecef92a25c6fa52a392228";
-   sha256 = "07154d705lrj8jj8l6wyb1jq2593pjcgfh5xscp8sb1ph8d7plkx";
+   rev = "2b9da42ed0750457284cb1f9fae57e9bfc910519";
+   sha256 = "01ma81bb0lvqi43irha14sgm75miwyqz9gbmqrr8m1slmwvwx6b1";
   };
 
   nvimconfig = pkgs.fetchFromGitHub {
@@ -32,6 +32,10 @@ in
 
     ".config/alacritty/alacritty.toml" = {
       source = "${dotfiles}/.alacritty.toml";
+    };
+
+    ".background-image" = {
+      source = "${dotfiles}/wallpapers/01.jpg";
     };
   };
 }
