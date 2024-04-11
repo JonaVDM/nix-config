@@ -7,6 +7,7 @@
     ./cli
     ./apps
     ./gnome
+    ./dev
   ];
 
   options = {

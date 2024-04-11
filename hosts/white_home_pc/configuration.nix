@@ -24,7 +24,16 @@
   common.nvidia = true;
   common.docker = true;
 
-  home-manager.users.jona.wm.gnome = true;
+  home-manager.users.jona = {
+    wm.gnome = true;
+    dev = {
+      go = true;
+      rust = false;
+      node = true;
+      python = true;
+      java = false;
+    };
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -12,9 +12,6 @@
     alacritty
     nix-prefetch-git
     gcc
-    nodejs
-    go
-    python3
     jq
     zoxide
   ];
