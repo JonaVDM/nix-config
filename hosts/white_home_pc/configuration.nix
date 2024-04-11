@@ -32,6 +32,10 @@
       node = true;
       python = true;
       java = false;
+      dart = false;
+      docker = false;
+      frontend = false;
+      generic_lsp = false;
     };
 
     iac = {
