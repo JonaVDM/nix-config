@@ -33,6 +33,12 @@
       python = true;
       java = false;
     };
+
+    iac = {
+      nix = true;
+      ansible = false;
+      azure = false;
+    };
   };
 
   # This value determines the NixOS release from which the default
