@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [
@@ -8,6 +8,12 @@
     ./apps
     ./gnome
   ];
+
+  options = {
+    wm = {
+      gnome = lib.mkEnableOption "Use Gnome";
+    };
+  };
 
   config = {
     home = {

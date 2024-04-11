@@ -1,5 +1,6 @@
-{ lib, ... }:
+{ config, lib, ... }:
 
+lib.mkIf(config.wm.gnome)
 {
   dconf.settings = {
     #
