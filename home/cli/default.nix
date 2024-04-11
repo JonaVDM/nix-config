@@ -9,11 +9,20 @@
   home.packages = with pkgs; [
     ripgrep
     neovim
-    alacritty
     nix-prefetch-git
     gcc
     jq
     zoxide
+    curl
+    gh
+    glab
+    htop
+    btop
+    bat
+    kubectl
+    tldr
+    pandoc
+    just
   ];
 
   programs.git = {
