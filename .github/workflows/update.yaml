@@ -24,3 +24,4 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@main
         with:
           pr-title: "chore(flakes): update nix flakes"
+          commit-msg: "chore(flakes): update nix flakes"
