@@ -25,5 +25,9 @@ in
     ".background-image" = {
       source = "${gen.dotfiles.src}/wallpapers/01.jpg";
     };
+
+    ".background-image.jpg" = {
+      source = "${gen.dotfiles.src}/wallpapers/01.jpg";
+    };
   };
 }
