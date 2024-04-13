@@ -14,12 +14,12 @@
       };
       in listToAttrs [
         # { name = "*"; value = { installation_mode = "blocked"; }; }
-        (extension "ublock-origin" "uBlock0@raymondhill.net")
         (extension "bitwarden-password-manager" "{446900e4-71c2-419f-a6a7-df9c091e268b}")
         (extension "facebook_container" "@contain-facebook")
         (extension "multi_account_containers" "@testpilot-containers")
         (extension "refined_github" "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}")
         (extension "return_youtube_dislikes" "{762f9885-5a13-4abd-9c77-433dcd38b8fd}")
+        (extension "ublock-origin" "uBlock0@raymondhill.net")
       ];
       # about:support#addons for extension id
       # Valid strings for installation_mode are "allowed", "blocked",

@@ -6,13 +6,13 @@
       nixd
     ] ++
     lib.optionals (config.iac.ansible) [ # Note: untested
-      python3
       ansible
       ansible-language-server
       ansible-lint
+      python3
     ] ++ 
     lib.optionals (config.iac.azure) [ # Note: untested
-      bicep
       azure-cli
+      bicep
     ];
 }

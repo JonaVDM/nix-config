@@ -5,12 +5,12 @@
     lib.optionals (config.dev.go) [
       go 
       gopls
-      gotools
       gotestsum
+      gotools
     ] ++
     lib.optionals (config.dev.rust) [
-      rustup 
       rust-analyzer
+      rustup 
     ] ++ 
     lib.optionals (config.dev.node) [
       nodejs_latest
@@ -31,12 +31,12 @@
       docker-ls
     ] ++
     lib.optionals (config.dev.frontend) [
-      nodePackages.eslint
-      eslint_d
       emmet-ls
-      typescript
+      eslint_d
+      nodePackages.eslint
       tailwindcss
       tailwindcss-language-server
+      typescript
 
       nodePackages.svelte-language-server
       nodePackages.volar

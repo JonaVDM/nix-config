@@ -2,12 +2,12 @@
 
 {
   imports = [
+    ./apps
+    ./cli
+    ./dev
     ./dotfiles.nix
     ./fonts.nix
-    ./cli
-    ./apps
     ./gnome
-    ./dev
   ];
 
   options = {

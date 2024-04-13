@@ -2,10 +2,9 @@
 
 {
   imports = [
-    ./system.nix
-
     ./common
     ./dev
+    ./system.nix
     ./wm
   ];
 

@@ -6,8 +6,8 @@
   ];
 
   home.packages = with pkgs; [
+    alacritty
     discord
     spotify
-    alacritty
   ];
 }

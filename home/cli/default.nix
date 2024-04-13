@@ -7,23 +7,23 @@
   ];
 
   home.packages = with pkgs; [
-    ripgrep
-    neovim
-    nix-prefetch-git
-    gcc
-    jq
-    zoxide
+    bat
+    btop
     curl
+    gcc
     gh
     glab
     htop
-    btop
-    bat
-    kubectl
-    tldr
-    pandoc
+    jq
     just
+    kubectl
     ncspot
+    neovim
+    nix-prefetch-git
+    pandoc
+    ripgrep
+    tldr
+    zoxide
   ];
 
   programs.git = {
