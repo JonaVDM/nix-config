@@ -20,7 +20,7 @@
 
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
-  wm.gnome = true;
+  wm.gnome = false;
   common.nvidia = true;
   common.docker = true;
 
