@@ -43,6 +43,10 @@
       ansible = false;
       azure = false;
     };
+
+    ops = {
+      gitlab = false;
+    };
   };
 
   # This value determines the NixOS release from which the default

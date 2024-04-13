@@ -19,10 +19,15 @@
       ansible = lib.mkEnableOption "ansible development";
       azure = lib.mkEnableOption "azure development";
     };
+
+    ops = {
+      gitlab = lib.mkEnableOption "gitlab development";
+    };
   };
 
   imports = [
     ./dev.nix
     ./iac.nix
+    ./ops.nix
   ];
 }
