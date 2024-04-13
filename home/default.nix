@@ -2,17 +2,20 @@
 
 {
   imports = [
+    ./dotfiles.nix
+    ./fonts.nix
+
     ./apps
     ./cli
     ./dev
-    ./dotfiles.nix
-    ./fonts.nix
     ./gnome
+    ./hyprland
   ];
 
   options = {
     wm = {
       gnome = lib.mkEnableOption "Use Gnome";
+      hyprland = lib.mkEnableOption "Use Hyprland config";
     };
   };
 

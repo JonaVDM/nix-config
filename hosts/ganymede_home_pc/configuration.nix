@@ -21,11 +21,15 @@
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
   wm.gnome = false;
+  wm.hyprland = true;
+
   common.nvidia = true;
   common.docker = true;
 
   home-manager.users.jona = {
-    wm.gnome = true;
+    wm.gnome = false;
+    wm.hyprland = true;
+
     dev = {
       dart = false;
       go = true;
