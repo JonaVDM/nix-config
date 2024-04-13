@@ -13,7 +13,7 @@
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
 
-  networking.hostName = "white";
+  networking.hostName = "ganymede";
 
   # Enable networking
   networking.networkmanager.enable = true;

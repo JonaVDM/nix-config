@@ -14,12 +14,12 @@
     {
     nixosConfigurations = {
       # Home PC
-      "white" = nixpkgs.lib.nixosSystem {
+      "ganymede" = nixpkgs.lib.nixosSystem {
         system = "x86_65-linux";
 
         specialArgs = { inherit inputs; };
         modules = [ 
-	        ./hosts/white_home_pc/configuration.nix 
+	        ./hosts/ganymede_home_pc/configuration.nix 
 	        home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
