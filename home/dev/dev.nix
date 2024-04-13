@@ -27,9 +27,6 @@
       dart
       # Todo dartls
     ] ++
-    lib.optionals (config.dev.docker) [
-      docker-ls
-    ] ++
     lib.optionals (config.dev.frontend) [
       emmet-ls
       eslint_d

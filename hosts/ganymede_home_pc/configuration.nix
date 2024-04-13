@@ -27,25 +27,28 @@
   home-manager.users.jona = {
     wm.gnome = true;
     dev = {
+      dart = false;
       go = true;
-      rust = false;
+      java = false;
       node = true;
       python = true;
-      java = false;
-      dart = false;
-      docker = false;
+      rust = false;
+
       frontend = false;
       generic_lsp = false;
     };
 
     iac = {
-      nix = true;
       ansible = false;
       azure = false;
+      nix = true;
     };
 
     ops = {
+      docker = false;
       gitlab = false;
+      kind = false;
+      k8s = false;
     };
   };
 

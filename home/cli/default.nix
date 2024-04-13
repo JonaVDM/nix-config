@@ -16,7 +16,6 @@
     htop
     jq
     just
-    kubectl
     ncspot
     neovim
     nix-prefetch-git
