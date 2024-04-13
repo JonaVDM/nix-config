@@ -10,6 +10,8 @@
       ansible-language-server
       ansible-lint
       python3
+      yaml-language-server
+      yamllint
     ] ++ 
     lib.optionals (config.iac.azure) [ # Note: untested
       azure-cli
