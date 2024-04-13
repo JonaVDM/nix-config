@@ -23,6 +23,7 @@
     tldr
     pandoc
     just
+    ncspot
   ];
 
   programs.git = {
