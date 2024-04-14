@@ -21,7 +21,7 @@
     },
     "nvim": {
         "cargoLocks": null,
-        "date": "2024-04-11",
+        "date": "2024-04-14",
         "extract": null,
         "name": "nvim",
         "passthru": null,
@@ -33,10 +33,10 @@
             "name": null,
             "owner": "JonaVDM",
             "repo": "neovim-config",
-            "rev": "f79117d6129a318fb564ba7c604c0d7e33463ea9",
-            "sha256": "sha256-UcHyhvHyi7hyINUC1xWJYYH8pf7edsGy57bcbJJhxak=",
+            "rev": "fb7e0074c86de29aff98b877f6d268456f0de298",
+            "sha256": "sha256-MmjtHpeiSmmErYWIcIq+XUkrXJGH+iTEsLAd4PnWzZM=",
             "type": "github"
         },
-        "version": "f79117d6129a318fb564ba7c604c0d7e33463ea9"
+        "version": "fb7e0074c86de29aff98b877f6d268456f0de298"
     }
 }
