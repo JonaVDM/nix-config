@@ -37,6 +37,7 @@
       dcl = "docker compose logs";
       dcw = "docker compose up --watch";
       v = "nvim";
+      vim-dev = "NVIM_APPNAME=nvim-dev nvim";
       pm = "pnpm";
       cl = "clear";
       kc = "kubectl";
