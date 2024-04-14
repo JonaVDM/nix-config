@@ -59,6 +59,9 @@ lib.mkIf(config.wm.hyprland)
 
       repeat_delay = 200
       repeat_rate = 55
+
+     sensitivity = 0.7
+     accel_profile = flat
     }
 
     general {
