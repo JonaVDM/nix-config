@@ -32,6 +32,9 @@
 
       bind-key -n ^F5 switch-client -p
       bind-key -n ^F6 switch-client -n
+
+      bind-key -r f run-shell 'tmux neww -n TmuxSwitcher "sh ~/scripts/tmux-switcher.sh"'
+      bind-key -n ^F9  run-shell 'sh ~/scripts/tmux-switcher.sh ~/Code'
     '';
   };
 

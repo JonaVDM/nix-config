@@ -29,5 +29,9 @@ in
     ".background-image.jpg" = {
       source = "${gen.dotfiles.src}/wallpapers/01.jpg";
     };
+
+    "scripts/tmux-switcher.sh" = {
+      source = "${gen.dotfiles.src}/scripts/tmux-switcher.sh";
+    };
   };
 }
