@@ -23,8 +23,12 @@
   wm.gnome = false;
   wm.hyprland = true;
 
-  common.nvidia = true;
-  common.docker = true;
+  common = {
+    nvidia = true;
+
+    docker = true;
+    podman = false;
+  };
 
   home-manager.users.jona = {
     wm.gnome = false;
