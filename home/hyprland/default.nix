@@ -119,6 +119,7 @@ lib.mkIf(config.wm.hyprland)
     bind = $mod, B, exec, $browser
     bind = $mod, M, exec, $music
     bind = $mod_Ctrl, L, exec, hyprlock
+    bind = $mod, F, fullscreen
 
     # Move focus with mod + arrow keys
     bind = $mod, $left, movefocus, l
