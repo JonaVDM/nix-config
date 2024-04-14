@@ -48,13 +48,13 @@ lib.mkIf(config.wm.hyprland)
     input {
       kb_layout = us
 
-      follow_mouse = 1
+      follow_mouse = 0
 
       touchpad {
           natural_scroll = false
       }
 
-      sensitivity = 0 
+      sensitivity = 0
       kb_options=caps:escape
 
       repeat_delay = 200
@@ -81,7 +81,7 @@ lib.mkIf(config.wm.hyprland)
         enabled = true
         size = 3
         passes = 1
-        
+
         vibrancy = 0.1696
       }
 
@@ -102,6 +102,7 @@ lib.mkIf(config.wm.hyprland)
 
     master {
       new_is_master = true
+      orientation = right
     }
 
     windowrulev2 = suppressevent maximize, class:.*
@@ -113,7 +114,7 @@ lib.mkIf(config.wm.hyprland)
     bind = $mod, Space, exec, $menu
     bind = $mod, P, pseudo, # dwindle
     bind = $mod, B, exec, $browser
-    bind = $mod, M, exec, $music 
+    bind = $mod, M, exec, $music
     bind = $mod_Ctrl, L, exec, hyprlock
 
     # Move focus with mod + arrow keys
@@ -167,7 +168,7 @@ lib.mkIf(config.wm.hyprland)
     bind = $mod_Shift, Print, exec, grim -g "$(slurp)" - | wl-copy
   '';
 
-  
+
   home.file.".config/hypr/hyprpaper.conf" = {
     text = ''
       preload = ~/.background-image.jpg
