@@ -30,6 +30,10 @@
     podman = false;
   };
 
+  gaming = {
+    steam = true;
+  };
+
   home-manager.users.jona = {
     wm.gnome = false;
     wm.hyprland = true;

@@ -6,6 +6,7 @@
     ./dev
     ./system.nix
     ./wm
+    ./gaming
   ];
 
   programs.zsh.enable = true;
