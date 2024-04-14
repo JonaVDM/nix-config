@@ -20,6 +20,7 @@
     extraConfig = ''
       set -g mouse on
       set-option -g detach-on-destroy off
+      set -ag terminal-overrides ",xterm-256color:RGB"
       
       unbind '"'
       unbind %
