@@ -17,6 +17,7 @@
     LC_TIME = "nl_NL.UTF-8";
   };
 
+  hardware.pulseaudio.enable = false;
   sound.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -26,8 +27,6 @@
     pulse.enable = true;
     jack.enable = true;
   };
-
-  services.openssh.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 

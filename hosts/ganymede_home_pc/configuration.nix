@@ -64,6 +64,8 @@
     };
   };
 
+  services.openssh.enable = true;
+
   # For now here until i find better method of mounting these. The goal is to
   # it auto mount when it detects my home network, or via a simple command.
   fileSystems."/mnt/wynnic" = {
