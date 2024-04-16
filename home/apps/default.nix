@@ -9,5 +9,7 @@
     alacritty
     discord
     spotify
+    libreoffice
+    obsidian
   ];
 }
