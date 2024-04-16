@@ -1,4 +1,4 @@
-{ ... }:
+{ outputs, ... }:
 
 # A collection of (un)sensible settings
 {
@@ -37,5 +37,12 @@
     automatic = true;
     dates = "*-*-* 12:00:00";
     options = "--delete-older-than 7d";
+  };
+
+  # overlays
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.staging-next-packages
+    ];
   };
 }

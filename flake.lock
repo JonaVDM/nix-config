@@ -36,10 +36,27 @@
         "type": "github"
       }
     },
+    "nixpkgs-sn": {
+      "locked": {
+        "lastModified": 1713290457,
+        "narHash": "sha256-Z2YTaTRrB6N190RFFWQKBmyyMm95c1sjZ+ghCmLP96E=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "feedc73bee3d3f83b85d36c91f4bd4ff16fcfe43",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "staging-next",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-sn": "nixpkgs-sn"
       }
     }
   },
