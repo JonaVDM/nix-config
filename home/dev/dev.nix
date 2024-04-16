@@ -1,7 +1,7 @@
 { pkgs, config, lib, ... }:
 
 {
-  home.packages = with pkgs; [] ++ 
+  home.packages = with pkgs; [] ++
     lib.optionals (config.dev.go) [
       pkgs.staging-next.go
       gopls
@@ -10,15 +10,15 @@
     ] ++
     lib.optionals (config.dev.rust) [
       rust-analyzer
-      rustup 
-    ] ++ 
+      rustup
+    ] ++
     lib.optionals (config.dev.node) [
       nodejs_latest
-    ] ++ 
+    ] ++
     lib.optionals (config.dev.python) [
       python3
       # Todo lsp
-    ] ++ 
+    ] ++
     lib.optionals (config.dev.java) [
       jdk22
       jetbrains.idea-ultimate
