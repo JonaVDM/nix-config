@@ -13,6 +13,12 @@
         git add _sources &&
         git commit -m "chore(nvfetcher): update sources"
       '';
+      update-nixos = ''
+        cd ~/.nix-config &&
+        nix flake update
+        git add flake.lock &&
+        git commit -m "chore(flake): update lockfile"
+      '';
       update = "sudo nixos-rebuild switch --flake ~/.nix-config";
       gaa = "git add .";
       gcm = "git commit -m";
