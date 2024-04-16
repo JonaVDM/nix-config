@@ -59,9 +59,6 @@ lib.mkIf(config.wm.hyprland)
 
       repeat_delay = 200
       repeat_rate = 55
-
-     sensitivity = 0.7
-     accel_profile = flat
     }
 
     general {
@@ -168,8 +165,8 @@ lib.mkIf(config.wm.hyprland)
     bindl=, XF86AudioNext, exec, playerctl next
     bindl=, XF86AudioPrev, exec, playerctl previous
 
-    bind = $mod, Print, exec, grim - | wl-copy
-    bind = $mod_Shift, Print, exec, grim -g "$(slurp)" - | wl-copy
+    bind = $mod, Print, exec, grim
+    bind = $mod_Shift, Print, exec, grim -g "$(slurp)"
   '';
 
 
