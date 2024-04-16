@@ -28,6 +28,22 @@
           }
         ];
       };
+
+      # Work laptop
+      "deimos" = nixpkgs.lib.nixosSystem {
+        system = "x86_65-linux";
+
+        specialArgs = { inherit inputs; };
+        modules = [ 
+	        ./hosts/deimos_work/configuration.nix 
+	        home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jona = import ./home;
+          }
+        ];
+      };
     };
   };
 }
