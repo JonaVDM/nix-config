@@ -11,5 +11,6 @@
     spotify
     libreoffice
     obsidian
+    logseq
   ];
 }
