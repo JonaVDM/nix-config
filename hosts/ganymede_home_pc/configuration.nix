@@ -64,6 +64,17 @@
     };
   };
 
+  # For now here until i find better method of mounting these. The goal is to
+  # it auto mount when it detects my home network, or via a simple command.
+  fileSystems."/mnt/wynnic" = {
+    device = "10.0.0.9:/volume1/homes/jona";
+    fsType = "nfs";
+    options = [
+      "x-systemd.automount"
+      "noauto"
+    ];
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
