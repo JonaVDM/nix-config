@@ -46,3 +46,8 @@
 0. update `flake.nix`
     
     see other hosts under `nixosConfigurations` to see how
+
+## Adding overlays
+
+See the steps taken in the following commit:
+https://github.com/JonaVDM/nix-config/commit/33bee790e3eb2c3294791b1895c43cf835d250d5
