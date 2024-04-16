@@ -6,9 +6,9 @@
 
 {
   imports = [
-      ./hardware-configuration.nix
-      ../../modules
-    ];
+    ./hardware-configuration.nix
+    ../../modules
+  ];
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
@@ -57,7 +57,7 @@
 
     iac = {
       ansible = true;
-      azure = false;
+      azure = true;
       nix = true;
     };
 
@@ -74,7 +74,7 @@
 
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
