@@ -51,3 +51,21 @@
 
 See the steps taken in the following commit:
 https://github.com/JonaVDM/nix-config/commit/33bee790e3eb2c3294791b1895c43cf835d250d5
+
+## Building custom pi iso
+
+In order to build a custom image for the raspberry pi, first make sure to put
+the following config into the hosts configuration:
+
+```nix
+  boot.binfmt.emulatedSystems = [
+    "aarch64-linux"
+  ];
+```
+
+This will alow building for the arm64 platform. Next simply run the following
+command using `just`.
+
+```bash
+just build_arm
+```
