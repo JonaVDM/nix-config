@@ -20,8 +20,8 @@
 
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
-  wm.gnome = false;
-  wm.hyprland = true;
+  wm.gnome = true;
+  wm.hyprland = false;
 
   common = {
     nvidia = true;
@@ -35,8 +35,8 @@
   };
 
   home-manager.users.jona = {
-    wm.gnome = false;
-    wm.hyprland = true;
+    wm.gnome = true;
+    wm.hyprland = false;
 
     dev = {
       dart = false;
