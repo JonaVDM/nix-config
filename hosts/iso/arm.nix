@@ -1,6 +1,8 @@
 { pkgs, modulesPath, ... }:
 
 {
+  # WIP - not functional yet
+  #
   # This is a really "minimal" install image for the raspberry pi, just with
   # some sensible defaults, tools, and config to get started.
   # This config should bring up the node with the user `admin` (who has access
@@ -18,7 +20,8 @@
 
   boot = {
     kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
-    initrd.availableKernelModules = [ "xhci_pci" "usbhid" "usb_storage" ];
+    # initrd.availableKernelModules = [ "xhci_pci" "usbhid" "usb_storage" ];
+    initrd.availableKernelModules = [ "xhci_pci" "usbhid" ];
     loader.grub.enable = false;
     loader.generic-extlinux-compatible.enable = true;
   };

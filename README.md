@@ -54,6 +54,9 @@ https://github.com/JonaVDM/nix-config/commit/33bee790e3eb2c3294791b1895c43cf835d
 
 ## Building custom pi iso
 
+> [!WARNING]
+> WIP: Not functional yet, build failing
+
 In order to build a custom image for the raspberry pi, first make sure to put
 the following config into the hosts configuration:
 
