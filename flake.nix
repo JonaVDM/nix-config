@@ -46,6 +46,15 @@
           }
         ];
       };
+
+      # A build specifically for the pi
+      "arm_iso" = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        # specialArgs = { inherit inputs outputs; };
+        modules = [
+	        ./hosts/iso/arm.nix
+        ];
+      };
     };
   };
 }
