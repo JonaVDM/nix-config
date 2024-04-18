@@ -31,6 +31,7 @@
       gch = "git checkout";
       gfgl = "git fetch && git pull";
       clean = "git reset --hard && git clean -f";
+      wt = "git worktree";
       ls = "ls --color=auto";
       lsa = "ls -lah";
       l = "ls -lah";
@@ -49,6 +50,7 @@
       kc = "kubectl";
       git-fix = "git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'";
       cd = "z";
+      t = "tmux";
     };
 
     plugins = [
