@@ -14,14 +14,10 @@
   # Huge thanks to these resources for bootstrappnig this process
   # https://blog.janissary.xyz/posts/nixos-install-custom-image
 
-  imports = [
-    "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/raspberry-pi/4"
-  ];
-
   boot = {
-    kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
-    # initrd.availableKernelModules = [ "xhci_pci" "usbhid" "usb_storage" ];
-    initrd.availableKernelModules = [ "xhci_pci" "usbhid" ];
+    kernelModules = [ ];
+    extraModulePackages = [ ];
+    initrd.availableKernelModules = [ "xhci_pci" "usbhid" "usb_storage" ];
     loader.grub.enable = false;
     loader.generic-extlinux-compatible.enable = true;
   };
@@ -31,9 +27,14 @@
     fsType = "ext4";
     options = [ "noatime" ];
   };
+  swapDevices = [ ];
 
   services.openssh.enable = true;
-  networking.hostName = "pi-cake";
+
+  networking = {
+    hostName = "pi-cake";
+    useDHCP = true;
+  };
 
   users.users.admin = {
     isNormalUser = true;

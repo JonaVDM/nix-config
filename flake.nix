@@ -4,11 +4,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-sn.url = "github:nixos/nixpkgs/staging-next";
+    nix-hardware.url = "github:NixOS/nixos-hardware";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-hardware, ... }@inputs:
   let
     inherit (self) outputs;
   in
@@ -51,8 +52,8 @@
       # WIP - Not functoinal yet
       "arm_iso" = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
-        # specialArgs = { inherit inputs outputs; };
         modules = [
+          # nix-hardware.nixosModules.raspberry-pi-4
 	        ./hosts/iso/arm.nix
         ];
       };
