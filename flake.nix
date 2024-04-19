@@ -48,6 +48,14 @@
         ];
       };
 
+      "io" = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          # nix-hardware.nixosModules.raspberry-pi-4
+	        ./hosts/io-pie/configuration.nix
+        ];
+      };
+
       # A build specifically for the pi
       # WIP - Not functoinal yet
       "arm_iso" = nixpkgs.lib.nixosSystem {
