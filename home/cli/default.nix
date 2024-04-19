@@ -23,6 +23,8 @@
     ripgrep
     tldr
     zoxide
+    unzip
+    zip
   ];
 
   programs.git = {
