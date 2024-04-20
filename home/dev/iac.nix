@@ -16,5 +16,6 @@
     lib.optionals (config.iac.azure) [ # Note: untested
       azure-cli
       bicep
+      dotnet-sdk_8
     ];
 }
