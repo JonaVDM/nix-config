@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [] ++
     lib.optionals (config.dev.go) [
-      pkgs.staging-next.go
+      go
       gopls
       gotestsum
       gotools
