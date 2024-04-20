@@ -1,19 +1,33 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-  imports = [
-    ./hardware-config.nix
-  ];
+  # imports = [
+  #   ./hardware-config.nix
+  # ];
 
   boot = {
+    initrd.availableKernelModules = [ "xhci_pci" "uas" "usbhid" "usb_storage" ];
+    initrd.kernelModules = [ ];
+
     loader.grub.enable = false;
     loader.generic-extlinux-compatible.enable = true;
+    kernelModules = [ ];
+    extraModulePackages = [ ];
   };
+  hardware.enableRedistributableFirmware = true;
 
   services.openssh.enable = true;
 
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/NIXOS_SD";
+      fsType = "ext4";
+      options = [ "noatime" ];
+    };
+  };
+
   networking = {
-    hostName = "pi-cake";
+    hostName = "io";
     useDHCP = true;
   };
 
@@ -26,6 +40,8 @@
   environment.systemPackages = with pkgs; [
     neofetch
     git
+    wget
+    vim
   ];
 
   nix.package = pkgs.nixFlakes;
@@ -36,9 +52,14 @@
     settings = {
       listen-address = [ "::1" "127.0.0.1" "10.0.0.96" ];
       server = [ "1.1.1.1" "8.8.8.8" ];
-      address = [ "/port.lego/10.0.0.2" ];
+      address = [
+        "/port.lego/10.0.0.2"
+      ];
     };
   };
+
+  networking.firewall.allowedTCPPorts = [ 53 ];
+  networking.firewall.allowedUDPPorts = [ 53 ];
 
   nix.settings.trusted-users = [ "admin" ];
   nix.extraOptions = ''
@@ -47,5 +68,6 @@
     experimental-features = nix-command flakes
   '';
 
+  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
   system.stateVersion = "23.11";
 }
