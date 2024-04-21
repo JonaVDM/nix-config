@@ -25,8 +25,9 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
-  wm.gnome = true;
+  wm.gnome = false;
   wm.hyprland = false;
+  wm.sway = true;
 
   common = {
     nvidia = false;
@@ -40,8 +41,9 @@
   };
 
   home-manager.users.jona = {
-    wm.gnome = true;
+    wm.gnome = false;
     wm.hyprland = false;
+    wm.sway = true;
 
     dev = {
       dart = false;

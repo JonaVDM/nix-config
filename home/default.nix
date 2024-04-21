@@ -10,12 +10,14 @@
     ./dev
     ./gnome
     ./hyprland
+    ./sway
   ];
 
   options = {
     wm = {
       gnome = lib.mkEnableOption "Use Gnome";
       hyprland = lib.mkEnableOption "Use Hyprland config";
+      sway = lib.mkEnableOption "Use sway";
     };
   };
 
