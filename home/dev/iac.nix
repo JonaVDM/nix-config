@@ -13,10 +13,14 @@
       python3
       yaml-language-server
       yamllint
-    ] ++ 
-    lib.optionals (config.iac.azure) [ # Note: untested
+    ] ++
+    lib.optionals (config.iac.azure) [
       azure-cli
+      azure-functions-core-tools
       bicep
-      dotnet-sdk_8
+      (with dotnetCorePackages; combinePackages [
+        sdk_6_0_1xx
+        sdk_8_0_1xx
+      ])
     ];
 }
