@@ -53,7 +53,7 @@ lib.mkIf(config.wm.sway)
       repeat_delay 200
       repeat_rate 50
       xkb_layout us
-      xkb_options caps:escape
+      xkb_options caps:escape,compose:ralt
     }
 
     #
