@@ -39,5 +39,6 @@
       nodePackages.volar
     ] ++
     lib.optionals (config.dev.generic_lsp) [
+      efm-langserver
     ];
 }

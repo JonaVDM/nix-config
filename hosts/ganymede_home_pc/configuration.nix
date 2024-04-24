@@ -41,8 +41,8 @@
     python = true;
     rust = false;
 
-    frontend = false;
-    generic_lsp = false;
+    frontend = true;
+    generic_lsp = true;
   };
 
   iac = {
