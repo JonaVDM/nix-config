@@ -20,5 +20,6 @@ lib.mkIf(config.wm.gnome)
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.tray-icons-reloaded
   ];
 }

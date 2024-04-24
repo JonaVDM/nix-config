@@ -35,18 +35,18 @@ lib.mkIf(config.wm.gnome)
       "accel-profile" = "flat";
     };
     "org/gnome/desktop/peripherals/keyboard" = {
-      "delay" = lib.hm.gvariant.mkUint32 380;
-      "repeat-interval" = lib.hm.gvariant.mkUint32 20;
+      "delay" = lib.hm.gvariant.mkUint32 200;
+      "repeat-interval" = lib.hm.gvariant.mkUint32 25;
     };
-    
+
     #
     # Keybindings
     #
     "org/gnome/desktop/wm/keybindings" = {
       "switch-applications" = [];
       "switch-applications-backward" = [];
-      "switch-windows" = ["<Alt>Tab"]; 
-      "switch-windows-backward" = ["<Shift><Alt>Tab"]; 
+      "switch-windows" = ["<Alt>Tab"];
+      "switch-windows-backward" = ["<Shift><Alt>Tab"];
       "toggle-fullscreen" = ["<Super>f"];
       "switch-to-workspace-1" = ["<Super>1"];
       "switch-to-workspace-2" = ["<Super>2"];
@@ -56,7 +56,7 @@ lib.mkIf(config.wm.gnome)
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      "binding" = "<Super>Return"; 
+      "binding" = "<Super>Return";
       "command" = "alacritty";
       "name" = "Open Terminal";
     };
@@ -82,6 +82,7 @@ lib.mkIf(config.wm.gnome)
       "enabled-extensions" = [
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
         "blur-my-shell@aunetx"
+        "trayIconsReloaded@selfmade.pl"
       ];
     };
   };
