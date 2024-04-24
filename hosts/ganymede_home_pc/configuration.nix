@@ -34,34 +34,34 @@
     steam = true;
   };
 
+  dev = {
+    dart = false;
+    go = true;
+    java = false;
+    node = true;
+    python = true;
+    rust = false;
+
+    frontend = false;
+    generic_lsp = false;
+  };
+
+  iac = {
+    ansible = false;
+    azure = false;
+    nix = true;
+  };
+
+  ops = {
+    docker = false;
+    gitlab = false;
+    kind = false;
+    k8s = false;
+  };
+
   home-manager.users.jona = {
     wm.gnome = true;
     wm.hyprland = false;
-
-    dev = {
-      dart = false;
-      go = true;
-      java = false;
-      node = true;
-      python = true;
-      rust = false;
-
-      frontend = false;
-      generic_lsp = false;
-    };
-
-    iac = {
-      ansible = false;
-      azure = false;
-      nix = true;
-    };
-
-    ops = {
-      docker = false;
-      gitlab = false;
-      kind = false;
-      k8s = false;
-    };
   };
 
   services.openssh.enable = true;

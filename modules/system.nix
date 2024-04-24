@@ -1,4 +1,4 @@
-{ outputs, ... }:
+{ outputs, pkgs, ... }:
 
 # A collection of (un)sensible settings
 {
@@ -45,4 +45,10 @@
       outputs.overlays.staging-next-packages
     ];
   };
+
+  # Default packages needed
+  environment.systemPackages = with pkgs; [
+    vim
+    nvfetcher
+  ];
 }

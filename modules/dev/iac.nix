@@ -1,7 +1,7 @@
 { pkgs, config, lib, ... }:
 
 {
-  home.packages = with pkgs; [] ++
+  environment.systemPackages = with pkgs; [] ++
     lib.optionals (config.iac.nix) [
       nixd
       nil

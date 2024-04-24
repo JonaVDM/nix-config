@@ -7,7 +7,6 @@
 
     ./apps
     ./cli
-    ./dev
     ./gnome
     ./hyprland
     ./sway
