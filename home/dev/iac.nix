@@ -1,9 +1,10 @@
 { pkgs, config, lib, ... }:
 
 {
-  home.packages = with pkgs; [] ++ 
+  home.packages = with pkgs; [] ++
     lib.optionals (config.iac.nix) [
       nixd
+      nil
     ] ++
     lib.optionals (config.iac.ansible) [ # Note: untested
       ansible
