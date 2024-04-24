@@ -26,7 +26,6 @@
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
   wm.gnome = false;
-  wm.hyprland = false;
   wm.sway = true;
 
   common = {
@@ -67,7 +66,6 @@
 
   home-manager.users.jona = {
     wm.gnome = false;
-    wm.hyprland = false;
     wm.sway = true;
   };
 

@@ -21,7 +21,6 @@
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
   wm.gnome = true;
-  wm.hyprland = false;
 
   common = {
     nvidia = true;
@@ -61,7 +60,6 @@
 
   home-manager.users.jona = {
     wm.gnome = true;
-    wm.hyprland = false;
   };
 
   services.openssh.enable = true;
