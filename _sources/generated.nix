@@ -15,14 +15,14 @@
   };
   nvim = {
     pname = "nvim";
-    version = "c6b8e625c9bfe4a9485e52e6d0cce78ec934a5ef";
+    version = "d8ffe48ed2c5cae777147e23dcae0ae278771dd0";
     src = fetchFromGitHub {
       owner = "JonaVDM";
       repo = "neovim-config";
-      rev = "c6b8e625c9bfe4a9485e52e6d0cce78ec934a5ef";
+      rev = "d8ffe48ed2c5cae777147e23dcae0ae278771dd0";
       fetchSubmodules = false;
-      sha256 = "sha256-tTUFUJtnTEVj/nDPUB7KWOSCx303FeE18ys8xcmMkWA=";
+      sha256 = "sha256-Wjum8l6ijJLGmQC1R3u0Sh4VA/6RPMPp5i0N6KiTmFA=";
     };
-    date = "2024-04-24";
+    date = "2024-04-25";
   };
 }
