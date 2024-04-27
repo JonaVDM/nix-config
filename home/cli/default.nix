@@ -22,7 +22,6 @@
     pandoc
     ripgrep
     tldr
-    zoxide
     unzip
     zip
   ];

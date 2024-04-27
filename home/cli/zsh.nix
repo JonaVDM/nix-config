@@ -49,7 +49,6 @@
       cl = "clear";
       kc = "kubectl";
       git-fix = "git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'";
-      cd = "z";
       t = "tmux";
     };
 
@@ -96,7 +95,6 @@
 
     initExtra = ''
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      eval "$(zoxide init zsh)"
 
       setopt hist_ignore_all_dups
       setopt hist_reduce_blanks
