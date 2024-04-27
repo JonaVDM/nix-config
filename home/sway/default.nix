@@ -31,6 +31,7 @@ lib.mkIf(config.wm.sway)
     # wallpaper
     #
     # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+    output * bg #000000 solid_color
 
     #
     # Idle configuration
@@ -191,10 +192,4 @@ lib.mkIf(config.wm.sway)
 
     include @sysconfdir@/sway/config.d/*
   '';
-
-  # home.file.".config/waybar/config".text = ''
-  #   [
-  #
-  #   ]
-  # '';
 }
