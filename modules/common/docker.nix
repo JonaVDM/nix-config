@@ -1,6 +1,6 @@
 { lib, config, ... }:
 
-lib.mkIf(config.common.docker)
+lib.mkIf config.common.docker
 {
   virtualisation.docker = {
     enable = true;

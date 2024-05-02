@@ -1,4 +1,4 @@
-{ ... }:
+_:
 
 {
   programs.firefox.enable = true;
@@ -25,7 +25,7 @@
       # Valid strings for installation_mode are "allowed", "blocked",
       # "force_installed" and "normal_installed".
       # https://discourse.nixos.org/t/declare-firefox-extensions-and-settings/36265
-      # 
+      #
       # To add additional extensions, find it on addons.mozilla.org, find
       # the short ID in the url (like https://addons.mozilla.org/en-US/firefox/addon/!SHORT_ID!/)
       # Then, download the XPI by filling it in to the install_url template, unzip it,

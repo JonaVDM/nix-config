@@ -1,6 +1,6 @@
 { lib, config, ... }:
 
-lib.mkIf(config.common.nvidia)
+lib.mkIf config.common.nvidia
 {
   # Enable OpenGL
   hardware.opengl = {

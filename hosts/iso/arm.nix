@@ -60,14 +60,17 @@
     git
   ];
 
-  nix.package = pkgs.nixFlakes;
-  nix.extraOptions = ''
-    keep-outputs = true
-    keep-derivations = true
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      keep-outputs = true
+      keep-derivations = true
+      experimental-features = nix-command flakes
+    '';
 
-  nix.settings.trusted-users = [ "admin" ];
+    settings.trusted-users = [ "admin" ];
+  };
+
   programs.zsh.enable = true;
   environment.variables = {
     SHELL = "zsh";

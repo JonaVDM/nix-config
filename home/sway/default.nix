@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 
-lib.mkIf(config.wm.sway)
+lib.mkIf config.wm.sway
 {
   home.packages = with pkgs; [
     swayidle

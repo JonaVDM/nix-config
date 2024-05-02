@@ -1,21 +1,24 @@
 { pkgs, lib, config, ... }:
 
-lib.mkIf(config.wm.gnome)
+lib.mkIf config.wm.gnome
 {
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver = {
+    desktopManager.gnome.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm = {
+    # Enable the X11 windowing system.
     enable = true;
-    autoSuspend = false;
-  };
-  services.xserver.desktopManager.gnome.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    # Enable the GNOME Desktop Environment.
+    displayManager.gdm = {
+      enable = true;
+      autoSuspend = false;
+    };
+
+    # Configure keymap in X11
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
   };
 
   environment.systemPackages = with pkgs; [

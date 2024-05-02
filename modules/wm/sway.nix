@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }:
 
-lib.mkIf(config.wm.sway)
+lib.mkIf config.wm.sway
 {
   environment.systemPackages = with pkgs; [
     grim

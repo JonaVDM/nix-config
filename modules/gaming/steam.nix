@@ -1,6 +1,6 @@
 { lib, config, ... }:
 
-lib.mkIf(config.gaming.steam)
+lib.mkIf config.gaming.steam
 {
   programs = {
     steam = {

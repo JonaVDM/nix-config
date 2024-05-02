@@ -1,33 +1,32 @@
 { pkgs, config, lib, ... }:
 
 {
-  environment.systemPackages = with pkgs; [] ++
-    lib.optionals (config.dev.go) [
+  environment.systemPackages = with pkgs; lib.optionals config.dev.go [
       go
       gopls
       gotestsum
       gotools
     ] ++
-    lib.optionals (config.dev.rust) [
+    lib.optionals config.dev.rust [
       rust-analyzer
       rustup
     ] ++
-    lib.optionals (config.dev.node) [
+    lib.optionals config.dev.node [
       nodejs_latest
     ] ++
-    lib.optionals (config.dev.python) [
+    lib.optionals config.dev.python [
       python3
       # Todo lsp
     ] ++
-    lib.optionals (config.dev.java) [
+    lib.optionals config.dev.java [
       jdk22
       jetbrains.idea-ultimate
     ] ++
-    lib.optionals (config.dev.dart) [
+    lib.optionals config.dev.dart [
       dart
       # Todo dartls
     ] ++
-    lib.optionals (config.dev.frontend) [
+    lib.optionals config.dev.frontend [
       emmet-ls
       eslint_d
       nodePackages.eslint
@@ -38,7 +37,7 @@
       nodePackages.svelte-language-server
       nodePackages.volar
     ] ++
-    lib.optionals (config.dev.generic_lsp) [
+    lib.optionals config.dev.generic_lsp [
       efm-langserver
     ];
 }

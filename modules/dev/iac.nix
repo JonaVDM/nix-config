@@ -1,12 +1,11 @@
 { pkgs, config, lib, ... }:
 
 {
-  environment.systemPackages = with pkgs; [] ++
-    lib.optionals (config.iac.nix) [
+  environment.systemPackages = with pkgs; lib.optionals config.iac.nix [
       nixd
       nil
     ] ++
-    lib.optionals (config.iac.ansible) [ # Note: untested
+    lib.optionals config.iac.ansible [ # Note: untested
       ansible
       ansible-language-server
       ansible-lint
@@ -14,7 +13,7 @@
       yaml-language-server
       yamllint
     ] ++
-    lib.optionals (config.iac.azure) [
+    lib.optionals config.iac.azure [
       azure-cli
       azure-functions-core-tools
       bicep

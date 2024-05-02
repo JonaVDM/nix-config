@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 
-lib.mkIf(config.common.podman)
+lib.mkIf config.common.podman
 {
   virtualisation = {
     containers.enable = true;
