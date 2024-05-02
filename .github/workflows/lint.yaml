@@ -15,4 +15,4 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
 
       - name: run statix lint
-        run: nix run nixpkgs#statix -- check . -i **/hardware-configuration.nix _sources
+        run: nix run nixpkgs#statix -- check . -i **/hardware-configuration.nix _sources overlays.nix flake.nix
