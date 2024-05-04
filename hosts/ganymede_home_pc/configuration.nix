@@ -37,6 +37,7 @@
   };
 
   gaming = {
+    common = true;
     steam = true;
   };
 
@@ -70,6 +71,11 @@
   };
 
   services.openssh.enable = true;
+
+  # wayland cursor fix
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = 1;
+  };
 
   # For now here until i find better method of mounting these. The goal is to
   # it auto mount when it detects my home network, or via a simple command.
