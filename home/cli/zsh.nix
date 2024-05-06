@@ -50,6 +50,8 @@
       kc = "kubectl";
       git-fix = "git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'";
       t = "tmux";
+      e = "nnn";
+      pdf = "zathura";
     };
 
     plugins = [

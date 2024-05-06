@@ -19,10 +19,12 @@
     ncspot
     neovim
     nix-prefetch-git
+    nnn
     pandoc
     ripgrep
     tldr
     unzip
+    zathura
     zip
   ];
 
