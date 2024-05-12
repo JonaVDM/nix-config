@@ -12,5 +12,6 @@
     libreoffice
     obsidian
     logseq
+    mpv
   ];
 }
