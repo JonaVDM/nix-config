@@ -1,7 +1,6 @@
 name: lint-nix-config
 on:
   push:
-  pull_request:
 
 jobs:
   statix:
