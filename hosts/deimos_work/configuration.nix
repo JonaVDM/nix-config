@@ -35,6 +35,7 @@
 
   common = {
     nvidia = false;
+    bluetooth = true;
 
     docker = true;
     podman = false;
