@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; lib.optionals config.dev.go [
-      go
+      staging-next.go
       gopls
       gotestsum
       gotools
