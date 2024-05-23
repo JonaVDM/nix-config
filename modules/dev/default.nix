@@ -1,8 +1,8 @@
-{ pkgs, lib, config, ... }:
-with lib;
+{ lib, ... }:
 
 {
   imports = [
+    ./android.nix
     ./dev.nix
     ./iac.nix
     ./ops.nix
@@ -19,6 +19,7 @@ with lib;
 
       frontend = lib.mkEnableOption "react/angular/vue/svelte/emmet lsp";
       generic_lsp = lib.mkEnableOption "lots of random language servers";
+      android = lib.mkEnableOption "android things";
     };
 
     iac = {
