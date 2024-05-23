@@ -68,13 +68,13 @@
       }
 
       {
-        file = "share/zsh-users/zsh-syntax-highlighting.zsh";
+        file = "share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
         name = "zsh-syntax-highlighting";
         src = pkgs.zsh-syntax-highlighting;
       }
 
       {
-        file = "shre/zsh-users/zsh-completions.zsh";
+        file = "share/zsh-users/zsh-completions.zsh";
         name = "zsh-completions";
         src = pkgs.zsh-completions;
       }
