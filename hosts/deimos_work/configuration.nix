@@ -55,7 +55,7 @@
   };
 
   iac = {
-    ansible = true;
+    ansible = false;
     azure = true;
     nix = true;
   };
