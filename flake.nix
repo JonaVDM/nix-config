@@ -7,9 +7,11 @@
     nix-hardware.url = "github:NixOS/nixos-hardware";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-hardware, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
     inherit (self) outputs;
   in

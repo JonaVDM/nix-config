@@ -3,6 +3,7 @@
 {
   imports = [
     ./firefox.nix
+    ./vscode.nix
   ];
 
   home.packages = with pkgs; [
@@ -13,5 +14,6 @@
     obsidian
     logseq
     mpv
+    zed-editor
   ];
 }

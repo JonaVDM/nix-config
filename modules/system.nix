@@ -1,4 +1,4 @@
-{ outputs, pkgs, ... }:
+{ outputs, inputs, pkgs, ... }:
 
 # A collection of (un)sensible settings
 {
@@ -34,6 +34,7 @@
   nixpkgs = {
     overlays = [
       outputs.overlays.staging-next-packages
+      inputs.nix-vscode-extensions.overlays.default
     ];
   };
 
