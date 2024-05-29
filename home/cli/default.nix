@@ -34,8 +34,14 @@
       userName = "Jonathan van der Meulen";
       userEmail = "32264711+JonaVDM@users.noreply.github.com";
       extraConfig = {
+        commit = {
+          template = "~/.gitmessage";
+          gpgsign = "true";
+        };
+        gpg.format = "ssh";
         init.defaultBranch = "main";
-        commit.template = "~/.gitmessage";
+        push.autoSetupRemote = "true";
+        user.signingkey = "~/.ssh/id_ed25519.pub";
       };
     };
 
