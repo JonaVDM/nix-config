@@ -10,6 +10,8 @@ lib.mkIf config.wm.sway
     slurp
     waybar
     wl-clipboard
+    wl-mirror
+    pipectl
   ];
 
   home.file.".config/sway/config".text = ''
@@ -162,15 +164,32 @@ lib.mkIf config.wm.sway
 
     bindsym $mod+r mode "resize"
     mode "resize" {
-        bindsym $left resize shrink width 10px
-        bindsym $down resize grow height 10px
-        bindsym $up resize shrink height 10px
-        bindsym $right resize grow width 10px
+      bindsym $left resize shrink width 10px
+      bindsym $down resize grow height 10px
+      bindsym $up resize shrink height 10px
+      bindsym $right resize grow width 10px
 
-        # Return to default mode
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+      # Return to default mode
+      bindsym Return mode "default"
+      bindsym Escape mode "default"
     }
+
+    mode "present" {
+      # command starts mirroring
+      bindsym m mode "default"; exec wl-present mirror
+      # these commands modify an already running mirroring window
+      bindsym o mode "default"; exec wl-present set-output
+      bindsym r mode "default"; exec wl-present set-region
+      bindsym Shift+r mode "default"; exec wl-present unset-region
+      bindsym s mode "default"; exec wl-present set-scaling
+      bindsym f mode "default"; exec wl-present toggle-freeze
+      bindsym c mode "default"; exec wl-present custom
+
+      # return to default mode
+      bindsym Return mode "default"
+      bindsym Escape mode "default"
+    }
+    bindsym $mod+p mode "present"
 
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
