@@ -52,6 +52,7 @@
       t = "tmux";
       e = "nnn";
       pdf = "zathura";
+      dev = "nix develop -c $SHELL";
     };
 
     plugins = [
