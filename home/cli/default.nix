@@ -14,6 +14,7 @@
     gh
     glab
     htop
+    imv
     jq
     just
     ncspot
