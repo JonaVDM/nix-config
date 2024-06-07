@@ -51,6 +51,7 @@
 
     frontend = true;
     generic_lsp = true;
+    android = true;
   };
 
   iac = {

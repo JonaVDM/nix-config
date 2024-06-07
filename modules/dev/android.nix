@@ -1,10 +1,11 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 lib.mkIf config.dev.android
 {
   programs.adb.enable = true;
 
-  # environment.systemPackages = with pkgs; [
-  #   android-tools
-  # ];
+  environment.systemPackages = with pkgs; [
+    dart
+    flutter
+  ];
 }
