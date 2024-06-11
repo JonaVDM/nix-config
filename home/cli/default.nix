@@ -14,6 +14,7 @@
     gh
     glab
     htop
+    hut
     imv
     jq
     just
