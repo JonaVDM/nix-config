@@ -35,6 +35,7 @@
     overlays = [
       outputs.overlays.staging-next-packages
       inputs.nix-vscode-extensions.overlays.default
+      inputs.nur.overlay
     ];
   };
 
