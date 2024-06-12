@@ -35,6 +35,7 @@
     overlays = [
       outputs.overlays.staging-next-packages
       inputs.nix-vscode-extensions.overlays.default
+      inputs.agenix.overlays.default
     ];
   };
 
@@ -42,5 +43,6 @@
   environment.systemPackages = with pkgs; [
     vim
     nvfetcher
+    agenix
   ];
 }
