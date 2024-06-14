@@ -12,7 +12,7 @@
 
     agenix = {
       url = "github:ryantm/agenix";
-      inputs.agenix.inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
