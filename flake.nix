@@ -5,18 +5,29 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-sn.url = "github:nixos/nixpkgs/staging-next";
     nix-hardware.url = "github:NixOS/nixos-hardware";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-generators, nix-hardware, ... }@inputs:
   let
     inherit (self) outputs;
   in
@@ -54,16 +65,16 @@
           }
         ];
       };
+    };
 
-      # A build specifically for the pi
-      # WIP - Not functoinal yet
-      "arm_iso" = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          # nix-hardware.nixosModules.raspberry-pi-4
-	        ./hosts/iso/arm.nix
-        ];
-      };
+    packages.x86_64-linux.pi-img = nixos-generators.nixosGenerate {
+      system = "aarch64-linux";
+      format = "sd-aarch64";
+
+      modules = [
+        nix-hardware.nixosModules.raspberry-pi-4
+        ./hosts/iso/pi.nix
+      ];
     };
   };
 }
