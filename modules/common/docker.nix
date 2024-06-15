@@ -1,13 +1,18 @@
 { lib, config, ... }:
 
-lib.mkIf config.common.docker
 {
-  virtualisation.docker = {
-    enable = true;
+  options.j = {
+    docker = lib.mkEnableOption "Enable Docker";
+  };
 
-    rootless = {
+  config = lib.mkIf config.j.docker {
+    virtualisation.docker = {
       enable = true;
-      setSocketVariable = true;
+
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
     };
   };
 }

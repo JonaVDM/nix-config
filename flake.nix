@@ -43,6 +43,7 @@
 	        ./hosts/ganymede_home_pc/configuration.nix
 	        home-manager.nixosModules.home-manager
           {
+            home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.jona = import ./home;
@@ -59,6 +60,7 @@
 	        ./hosts/deimos_work/configuration.nix
 	        home-manager.nixosModules.home-manager
           {
+            home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.jona = import ./home;

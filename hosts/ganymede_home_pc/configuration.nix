@@ -29,9 +29,9 @@
 
   wm.gnome = true;
 
-  common = {
+  j = {
+    # "common" stuff
     nvidia = true;
-
     docker = true;
     podman = false;
   };

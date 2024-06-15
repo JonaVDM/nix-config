@@ -1,24 +1,28 @@
 { lib, config, ... }:
 
-lib.mkIf config.common.nvidia
 {
-  # Enable OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+  options.j = {
+    nvidia = lib.mkEnableOption "Enable Nvidia";
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  config = lib.mkIf config.j.nvidia {
+    hardware.opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
 
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
+    services.xserver.videoDrivers = ["nvidia"];
 
-    open = false;
+    hardware.nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      powerManagement.finegrained = false;
 
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+      open = false;
+
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
   };
 }

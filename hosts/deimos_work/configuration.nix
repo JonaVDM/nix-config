@@ -29,10 +29,10 @@
   wm.gnome = false;
   wm.sway = true;
 
-  common = {
-    nvidia = false;
+  j = {
+    # "Common" stuff
     bluetooth = true;
-
+    nvidia = false;
     docker = true;
     podman = false;
   };

@@ -1,14 +1,18 @@
 { pkgs, config, lib, ... }:
 
-lib.mkIf config.common.bluetooth
 {
-  # enable bluethooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
+  options.j = {
+    bluetooth = lib.mkEnableOption "Enable Bluetooth";
   };
 
-  environment.systemPackages = with pkgs; [
-    bluetuith
-  ];
+  config = lib.mkIf config.j.bluetooth {
+    hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+      bluetuith
+    ];
+  };
 }
