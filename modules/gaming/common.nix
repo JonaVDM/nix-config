@@ -1,14 +1,19 @@
 { lib, config, pkgs, ... }:
 
-lib.mkIf config.gaming.common
 {
-  programs = {
-    gamemode.enable = true;
+  options.j.gaming = {
+    common = lib.mkEnableOption "Enable common packages and porgrams";
   };
 
-  environment.systemPackages = with pkgs; [
-    bottles
-    lutris
-    mangohud
-  ];
+  config = lib.mkIf config.j.gaming.common {
+    programs = {
+      gamemode.enable = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+      bottles
+      lutris
+      mangohud
+    ];
+  };
 }

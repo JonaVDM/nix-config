@@ -27,7 +27,6 @@
 
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
-  wm.gnome = true;
 
   j = {
     # "common" stuff
@@ -58,11 +57,13 @@
       kind = false;
       k8s = false;
     };
-  };
 
-  gaming = {
-    common = true;
-    steam = true;
+    gaming = {
+      common = true;
+      steam = true;
+    };
+
+    wm.gnome = true;
   };
 
   home-manager.users.jona = {

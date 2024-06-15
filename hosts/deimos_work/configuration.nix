@@ -26,9 +26,6 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
-  wm.gnome = false;
-  wm.sway = true;
-
   j = {
     # "Common" stuff
     bluetooth = true;
@@ -59,11 +56,17 @@
       kind = false;
       k8s = false;
     };
+
+    gaming = {
+      steam = false;
+    };
+
+    wm = {
+      gnome = false;
+      sway = true;
+    };
   };
 
-  gaming = {
-    steam = false;
-  };
 
   home-manager.users.jona = {
     wm.gnome = false;

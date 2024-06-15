@@ -3,8 +3,6 @@
 {
   imports = [
     ./system.nix
-    ./wm
-    ./gaming
 
     ./common/nvidia.nix
     ./common/docker.nix
@@ -15,6 +13,12 @@
     ./dev/dev.nix
     ./dev/iac.nix
     ./dev/ops.nix
+
+    ./gaming/steam.nix
+    ./gaming/common.nix
+
+    ./wm/gnome.nix
+    ./wm/sway.nix
   ];
 
   programs.zsh.enable = true;

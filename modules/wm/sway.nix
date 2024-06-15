@@ -1,20 +1,25 @@
 { pkgs, lib, config, ... }:
 
-lib.mkIf config.wm.sway
 {
-  environment.systemPackages = with pkgs; [
-    grim
-    mako
-    slurp
-    wl-clipboard
-    swayidle
-  ];
+  options.j.wm = {
+    sway = lib.mkEnableOption "enable sway";
+  };
 
-  services.gnome.gnome-keyring.enable = true;
+  config = lib.mkIf config.j.wm.sway {
+    environment.systemPackages = with pkgs; [
+      grim
+      mako
+      slurp
+      wl-clipboard
+      swayidle
+    ];
 
-  programs.sway = {
-    enable = true;
+    services.gnome.gnome-keyring.enable = true;
 
-    wrapperFeatures.gtk = true;
+    programs.sway = {
+      enable = true;
+
+      wrapperFeatures.gtk = true;
+    };
   };
 }
