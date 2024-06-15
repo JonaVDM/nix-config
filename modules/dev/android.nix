@@ -1,11 +1,16 @@
 { lib, config, pkgs, ... }:
 
-lib.mkIf config.dev.android
 {
-  programs.adb.enable = true;
+  options.j = {
+    android = lib.mkEnableOption "android things";
+  };
 
-  environment.systemPackages = with pkgs; [
-    dart
-    flutter
-  ];
+  config = lib.mkIf config.j.android {
+    programs.adb.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      dart
+      flutter
+    ];
+  };
 }

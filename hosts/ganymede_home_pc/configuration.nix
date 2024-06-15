@@ -34,37 +34,35 @@
     nvidia = true;
     docker = true;
     podman = false;
+
+    android = true;
+    dev = {
+      dart = false;
+      go = true;
+      java = false;
+      node = true;
+      python = true;
+      rust = false;
+
+      frontend = true;
+      generic_lsp = true;
+    };
+    iac = {
+      ansible = false;
+      azure = false;
+      nix = true;
+    };
+    ops = {
+      docker = false;
+      gitlab = false;
+      kind = false;
+      k8s = false;
+    };
   };
 
   gaming = {
     common = true;
     steam = true;
-  };
-
-  dev = {
-    dart = false;
-    go = true;
-    java = false;
-    node = true;
-    python = true;
-    rust = false;
-
-    frontend = true;
-    generic_lsp = true;
-    android = true;
-  };
-
-  iac = {
-    ansible = false;
-    azure = false;
-    nix = true;
-  };
-
-  ops = {
-    docker = false;
-    gitlab = false;
-    kind = false;
-    k8s = false;
   };
 
   home-manager.users.jona = {

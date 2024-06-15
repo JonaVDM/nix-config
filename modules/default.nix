@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./dev
     ./system.nix
     ./wm
     ./gaming
@@ -11,6 +10,11 @@
     ./common/docker.nix
     ./common/podman.nix
     ./common/bluetooth.nix
+
+    ./dev/android.nix
+    ./dev/dev.nix
+    ./dev/iac.nix
+    ./dev/ops.nix
   ];
 
   programs.zsh.enable = true;
