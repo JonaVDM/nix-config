@@ -1,4 +1,4 @@
-{  pkgs, ... }:
+{  pkgs, lib, ... }:
 
 {
   imports = [
@@ -34,7 +34,7 @@
     git = {
       enable = true;
       userName = "Jonathan van der Meulen";
-      userEmail = "32264711+JonaVDM@users.noreply.github.com";
+      userEmail = lib.mkDefault "32264711+JonaVDM@users.noreply.github.com";
       extraConfig = {
         commit = {
           template = "~/.gitmessage";
