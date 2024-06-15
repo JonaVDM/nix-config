@@ -13,6 +13,7 @@
     ./dev/dev.nix
     ./dev/iac.nix
     ./dev/ops.nix
+    ./dev/tools.nix
 
     ./gaming/steam.nix
     ./gaming/common.nix

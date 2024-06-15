@@ -45,6 +45,8 @@
 
       frontend = true;
       generic_lsp = true;
+
+      tools = true;
     };
     iac = {
       ansible = false;

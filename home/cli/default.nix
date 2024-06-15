@@ -1,33 +1,9 @@
-{  pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
     ./zsh.nix
     ./tmux.nix
-  ];
-
-  home.packages = with pkgs; [
-    bat
-    btop
-    curl
-    gcc
-    gh
-    glab
-    htop
-    hut
-    imv
-    jq
-    just
-    ncspot
-    neovim
-    nix-prefetch-git
-    nnn
-    pandoc
-    ripgrep
-    tldr
-    unzip
-    zathura
-    zip
   ];
 
   programs = {
@@ -52,7 +28,7 @@
     };
 
     ssh = {
-       enable = true;
+      enable = true;
     };
   };
 
