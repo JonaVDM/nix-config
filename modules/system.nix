@@ -19,15 +19,19 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
-    auto-optimise-store = true;
-  };
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+    };
 
-  nix.gc = {
-    automatic = true;
-    dates = "*-*-* 12:00:00";
-    options = "--delete-older-than 7d";
+    gc = {
+      automatic = true;
+      dates = "*-*-* 12:00:00";
+      options = "--delete-older-than 7d";
+    };
+
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
   };
 
   # overlays
