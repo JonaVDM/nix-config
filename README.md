@@ -31,7 +31,7 @@
 
     create a folder in `hosts` named after the host (optional add device)
     ```bash
-    mkdir hosts/[hostname]_[device] 
+    mkdir hosts/[hostname]_[device]
     ```
 
     in here, copy the system (hardware) config over
@@ -44,7 +44,7 @@
     see other hosts for example
 
 0. update `flake.nix`
-    
+
     see other hosts under `nixosConfigurations` to see how
 
 ## Adding overlays
@@ -54,28 +54,36 @@ https://github.com/JonaVDM/nix-config/commit/33bee790e3eb2c3294791b1895c43cf835d
 
 ## Building custom pi images
 
-In order to build a custom image for the raspberry pi, first make sure to put
-the following config into the hosts configuration:
+0. In order to build a custom image for the raspberry pi, first make sure to
+    put the following config into the hosts configuration:
 
-```nix
-  boot.binfmt.emulatedSystems = [
-    "aarch64-linux"
-  ];
-```
 
-This will alow building for the arm64 platform. Next simply run the following
-command using `just`.
+    ```nix
+    boot.binfmt.emulatedSystems = [
+      "aarch64-linux"
+    ];
+    ```
 
-```bash
-just build_arm
-```
+    This will alow building for the arm64 platform.
 
-After that compile it down to a image:
-```bash
-unzstd -d pi.sd/sd-image/{!insert_path_here!} -o nixos-sd-image.img
-```
+1. Build the image with the following command
 
-And upload it to the sd card or usb ssd. (device name can be found using `fsdisk -l`)
-```bash
-sudo dd if=~/.nix-config/nixos-sd-image.img of=/dev/{insert device name} bs=1M status=progress
-```
+
+    ```
+    nix build .#pi-img
+    ```
+
+    Building the image can take up to an hour to complete. Depending on how the
+    (local) cache is feeling.
+
+2. Decompile the image with the following (use tab to complete)
+
+    ```bash
+    unzstd -d result/sd-image/{...} -o nixos-sd-image.img
+    ```
+
+3. upload it to the sd card or usb ssd. (device name can be found using `fsdisk -l`)
+
+    ```bash
+    sudo dd if=./nixos-sd-image.img of=/dev/{insert device name} bs=1M status=progress
+    ```
