@@ -12,7 +12,6 @@
     spotify
     libreoffice
     obsidian
-    logseq
     mpv
     zed-editor
   ];
