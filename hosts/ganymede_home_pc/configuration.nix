@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules
+    ../../modules/pocketbase.nix
   ];
 
   # Bootloader.
@@ -27,6 +28,10 @@
 
   users.users.jona.extraGroups = [ "networkmanager" "wheel" ];
 
+  j.pocketbase = {
+    enable = true;
+    port = 8090;
+  };
 
   j = {
     # "common" stuff
