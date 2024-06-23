@@ -28,55 +28,55 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-generators, nix-hardware, ... }@inputs:
-  let
-    inherit (self) outputs;
-  in
-  {
-    overlays = import ./overlays.nix { inherit inputs; };
-    nixosConfigurations = {
-      # Home PC
-      "ganymede" = nixpkgs.lib.nixosSystem {
-        system = "x86_65-linux";
+    let
+      inherit (self) outputs;
+    in
+    {
+      overlays = import ./overlays.nix { inherit inputs; };
+      nixosConfigurations = {
+        # Home PC
+        "ganymede" = nixpkgs.lib.nixosSystem {
+          system = "x86_65-linux";
 
-        specialArgs = { inherit inputs outputs; };
-        modules = [
-	        ./hosts/ganymede_home_pc/configuration.nix
-	        home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.jona = import ./home;
-          }
-        ];
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/ganymede_home_pc/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.backupFileExtension = "backup";
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.jona = import ./home;
+            }
+          ];
+        };
+
+        # Work laptop
+        "deimos" = nixpkgs.lib.nixosSystem {
+          system = "x86_65-linux";
+
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/deimos_work/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.backupFileExtension = "backup";
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.jona = import ./home;
+            }
+          ];
+        };
       };
 
-      # Work laptop
-      "deimos" = nixpkgs.lib.nixosSystem {
-        system = "x86_65-linux";
+      packages.x86_64-linux.pi-img = nixos-generators.nixosGenerate {
+        system = "aarch64-linux";
+        format = "sd-aarch64";
 
-        specialArgs = { inherit inputs outputs; };
         modules = [
-	        ./hosts/deimos_work/configuration.nix
-	        home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.jona = import ./home;
-          }
+          nix-hardware.nixosModules.raspberry-pi-4
+          ./hosts/iso/pi.nix
         ];
       };
     };
-
-    packages.x86_64-linux.pi-img = nixos-generators.nixosGenerate {
-      system = "aarch64-linux";
-      format = "sd-aarch64";
-
-      modules = [
-        nix-hardware.nixosModules.raspberry-pi-4
-        ./hosts/iso/pi.nix
-      ];
-    };
-  };
 }
