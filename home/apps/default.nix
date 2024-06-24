@@ -9,10 +9,11 @@
   home.packages = with pkgs; [
     alacritty
     discord
-    spotify
+    element-desktop
     libreoffice
-    obsidian
     mpv
+    obsidian
+    spotify
     zed-editor
   ];
 }
