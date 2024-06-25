@@ -32,8 +32,8 @@
     };
   };
 
-  home.file."scripts/tmux-switcher.sh" = {
-    text = ''
+  home.packages = [
+    (pkgs.writers.writeBashBin "tmux-switcher" ''
       # Inspired by:
       # https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/bin/tmux-sessionizer
 
@@ -69,8 +69,6 @@
         fi
       fi
       tmux switch-client -t $selected_name
-    '';
-
-    executable = true;
-  };
+    '')
+  ];
 }

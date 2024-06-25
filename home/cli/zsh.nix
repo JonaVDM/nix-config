@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.zsh  = {
+  programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
     enableCompletion = true;
@@ -104,11 +104,11 @@
       setopt inc_append_history
       setopt share_history
 
-      bindkey -s ^f "sh ~/scripts/tmux-switcher.sh\n"
+      bindkey -s ^f "tmux-switcher\n"
       bindkey -s ^e "activate\n"
 
       # f9
-      bindkey -s '\e[20;5~' "sh ~/scripts/tmux-switcher.sh ~/Code\n"
+      bindkey -s '\e[20;5~' "tmux-switcher ~/Code\n"
     '';
   };
 }
