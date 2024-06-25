@@ -23,7 +23,7 @@
 0. clone this repo
 
     ```bash
-    git clone https://github.com/jonavdm/nix-config.git ~/.nix-config
+    git clone https://git.sr.ht/~jonavdm/nix-config ~/.nix-config
     cd ~/.nix-config
     ```
 
